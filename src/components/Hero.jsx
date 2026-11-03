@@ -5,7 +5,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
 
       {/* Background */}
       <div className="hero-visual">
