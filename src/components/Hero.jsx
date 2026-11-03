@@ -1,6 +1,7 @@
 import FrameAnimation from "./FrameAnimation";
 import Navbar from "./Navbar";
 import "../styles/Hero.css";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -44,34 +45,49 @@ export default function Hero() {
 
       </div>
 
-      {/* Floating Information */}
-      <div className="hero-info">
+      {/* Right Profile */}
+      <div className="hero-profile">
+        <span className="profile-label"> INDEPENDENT CREATOR </span>
+      <h2>
+        Product Builder
+      <br />
+        <span>•</span> Product Architect
+      </h2>
 
-        <div className="info-card">
-          <span className="info-label">
-            DEVELOPMENT FOCUS
-          </span>
+      <p>
+        Building ideas into meaningful
+        digital products.
+      </p>
 
-          <strong>
-            Software & Interactive
-          </strong>
+      <div className="profile-socials">
+        <a
+          href="https://github.com/hanzic-in"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+        >
+          <Github />
+        </a>
 
-          <span className="info-detail">
-            Applications · Games · Systems
-          </span>
-        </div>
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+        >
+          <Instagram />
+        </a>
 
-        <div className="info-card info-card-small">
-          <span className="info-label">
-            CURRENTLY EXPLORING
-          </span>
-
-          <strong>
-            Creative Technology
-          </strong>
-        </div>
-
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
+          <Linkedin />
+        </a>
       </div>
+    </div>
 
       {/* Bottom Navigation */}
       <div className="hero-index">
