@@ -145,59 +145,6 @@
 }
 
 /* =========================
-   INFORMATION CARDS
-========================= */
-
-.hero-info {
-  position: absolute;
-  right: 7%;
-  bottom: 115px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-
-  z-index: 4;
-}
-
-.info-card {
-  min-width: 230px;
-  padding: 20px 23px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  background: rgba(35, 20, 27, 0.48);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-.info-label {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 9px;
-  letter-spacing: 2px;
-}
-
-.info-card strong {
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.info-detail {
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 10px;
-}
-
-.info-card-small {
-  min-width: 190px;
-  padding: 16px 23px;
-}
-
-/* =========================
    HERO FOOTER
 ========================= */
 
@@ -370,15 +317,6 @@
     font-size: clamp(52px, 7vw, 76px);
     letter-spacing: -4px;
   }
-
-  .hero-info {
-    right: 5%;
-    bottom: 100px;
-  }
-
-  .info-card {
-    min-width: 190px;
-  }
 }
 
 /* =========================
@@ -449,10 +387,6 @@
     min-width: 210px;
     padding: 16px 18px;
     font-size: 10px;
-  }
-
-  .hero-info {
-    display: none;
   }
 
   .hero-index {
