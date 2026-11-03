@@ -364,50 +364,56 @@
     min-height: 100svh;
 
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
-    padding: 0 8% 265px;
+    padding: 0 46% 0 6%;
     z-index: 2;
   }
 
   .hero-text {
+    position: relative;
+    z-index: 3;
     width: 100%;
     max-width: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
-    transform: none;
-    text-align: left;
+    transform: translateY(15px);
+    text-align: center;
   }
 
   .eyebrow {
+    display: block;
     font-size: 9px;
-    letter-spacing: 3px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
   }
 
   .hero-text h1 {
     width: 100%;
-    font-size: clamp(42px, 10vw, 54px);
-    line-height: 0.98;
-    letter-spacing: -3px;
+    font-size: clamp(28px, 7.5vw, 36px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.8px;
     margin: 0 0 15px;
-    text-align: left;
+    text-align: center;
     text-wrap: normal;
   }
 
   .hero-text p {
     width: 100%;
-    max-width: 340px;
+    max-width: 100%;
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.65;
 
     margin: 0;
-    text-align: left;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: center;
   }
 
   /* RIGHT PROFILE */
