@@ -1,4 +1,5 @@
 import FrameAnimation from "./FrameAnimation";
+import Navbar from "./Navbar";
 import "../styles/Hero.css";
 
 export default function Hero() {
@@ -12,6 +13,7 @@ export default function Hero() {
 
       <div className="hero-overlay" />
 
+      <Navbar />
       {/* Main Content */}
       <div className="hero-content">
 
