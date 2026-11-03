@@ -1,7 +1,11 @@
 import FrameAnimation from "./FrameAnimation";
 import Navbar from "./Navbar";
 import "../styles/Hero.css";
-import { Github, Instagram, Linkedin } from "lucide-react";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin
+} from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -64,7 +68,7 @@ export default function Hero() {
           href="https://github.com/hanzic-in"
           target="_blank"
           rel="noreferrer"
-          aria-label="GitHub"
+          aria-label="FaGitHub"
         >
           <Github />
         </a>
@@ -73,7 +77,7 @@ export default function Hero() {
           href="#"
           target="_blank"
           rel="noreferrer"
-          aria-label="Instagram"
+          aria-label="FaInstagram"
         >
           <Instagram />
         </a>
@@ -82,7 +86,7 @@ export default function Hero() {
           href="#"
           target="_blank"
           rel="noreferrer"
-          aria-label="LinkedIn"
+          aria-label="FaLinkedIn"
         >
           <Linkedin />
         </a>
