@@ -11,34 +11,79 @@ export default function FrameAnimation() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", {
+      alpha: false
+    });
 
-    const images = [];
-    let loaded = 0;
+    const images = new Array(TOTAL_FRAMES);
+
     let currentFrame = 0;
     let animation;
+    let resizeObserver;
+    let preloadIndex = 0;
+    let destroyed = false;
 
-    canvas.width = 1920;
-    canvas.height = 1080;
+    const resizeCanvas = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = Math.round(rect.width * dpr);
+      canvas.height = Math.round(rect.height * dpr);
+
+      renderFrame(currentFrame);
+    };
 
     const renderFrame = (index) => {
       const img = images[index];
 
       if (!img?.complete || !img.naturalWidth) return;
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      const width = canvas.width;
+      const height = canvas.height;
+
+      const imageRatio = img.naturalWidth / img.naturalHeight;
+      const canvasRatio = width / height;
+
+      let sx = 0;
+      let sy = 0;
+      let sw = img.naturalWidth;
+      let sh = img.naturalHeight;
+
+      if (imageRatio > canvasRatio) {
+        sw = img.naturalHeight * canvasRatio;
+
+        const focusX = window.innerWidth <= 768 ? 0.50 : 0.5;
+
+        sx = Math.max(
+          0,
+          Math.min(
+            img.naturalWidth - sw,
+            img.naturalWidth * focusX - sw / 2
+          )
+        );
+      } else {
+        sh = img.naturalWidth / canvasRatio;
+        sy = (img.naturalHeight - sh) / 2;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.drawImage(
+        img,
+        sx, sy, sw, sh,
+        0, 0, width, height
+      );
     };
 
     const loadFrame = (index) => {
+      if (index < 0 || index >= TOTAL_FRAMES) return;
+
       if (images[index]) return;
 
       const img = new Image();
 
       img.onload = () => {
-        loaded++;
-
-        if (index === currentFrame) {
+        if (!destroyed && index === currentFrame) {
           renderFrame(index);
         }
       };
@@ -48,58 +93,56 @@ export default function FrameAnimation() {
       images[index] = img;
     };
 
-    // Load first frame immediately
     loadFrame(0);
 
-    // Preload frames progressively
-    let nextIndex = 1;
-
     const preload = () => {
-      if (nextIndex >= TOTAL_FRAMES) return;
+      if (destroyed || preloadIndex >= TOTAL_FRAMES) return;
 
-      loadFrame(nextIndex++);
-      requestAnimationFrame(preload);
+      loadFrame(preloadIndex++);
+
+      setTimeout(preload, 15);
     };
 
-    const preloadId = requestAnimationFrame(preload);
+    preloadIndex = 1;
+    preload();
 
-    // Scroll animation
-    animation = gsap.to(
-      { frame: 0 },
-      {
-        frame: TOTAL_FRAMES - 1,
-        snap: "frame",
-        ease: "none",
+    resizeObserver = new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(canvas);
 
-        onUpdate() {
-          const frame = Math.round(this.targets()[0].frame);
+    resizeCanvas();
 
-          currentFrame = frame;
+    const playhead = { frame: 0 };
 
-          if (!images[frame]) {
-            loadFrame(frame);
-          }
+    animation = gsap.to(playhead, {
+      frame: TOTAL_FRAMES - 1,
+      ease: "none",
 
-          renderFrame(frame);
-        },
+      onUpdate() {
+        currentFrame = Math.round(playhead.frame);
 
-        scrollTrigger: {
-          trigger: canvas,
-          start: "top top",
-          end: "+=2500",
-          scrub: 0.5,
-          pin: true,
-        },
+        loadFrame(currentFrame);
+        renderFrame(currentFrame);
+      },
+
+      scrollTrigger: {
+        trigger: canvas,
+        start: "top top",
+        end: "+=2500",
+        scrub: 0.5,
+        pin: true
       }
-    );
+    });
 
     return () => {
-      cancelAnimationFrame(preloadId);
-      animation.scrollTrigger?.kill();
-      animation.kill();
+      destroyed = true;
+
+      resizeObserver?.disconnect();
+
+      animation?.scrollTrigger?.kill();
+      animation?.kill();
 
       images.forEach((img) => {
-        if (img) img.src = "";
+        if (img) img.onload = null;
       });
     };
   }, []);

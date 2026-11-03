@@ -5,18 +5,14 @@ export default function Hero() {
   return (
     <section className="hero">
 
-      <nav className="navbar">
-        <div className="logo">
-          HAN<span>.</span>
-        </div>
+      {/* Background */}
+      <div className="hero-visual">
+        <FrameAnimation />
+      </div>
 
-        <div className="nav-links">
-          <a href="#works">WORKS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONTACT</a>
-        </div>
-      </nav>
+      <div className="hero-overlay" />
 
+      {/* Main Content */}
       <div className="hero-content">
 
         <div className="hero-text">
@@ -38,20 +34,51 @@ export default function Hero() {
           </p>
 
           <a href="#works" className="hero-button">
-            EXPLORE MY WORKS <span>↗</span>
+            <span>EXPLORE MY WORKS</span>
+            <span className="button-arrow">↗</span>
           </a>
 
         </div>
 
-        <div className="hero-visual">
-          <FrameAnimation />
+      </div>
+
+      {/* Floating Information */}
+      <div className="hero-info">
+
+        <div className="info-card">
+          <span className="info-label">
+            DEVELOPMENT FOCUS
+          </span>
+
+          <strong>
+            Software & Interactive
+          </strong>
+
+          <span className="info-detail">
+            Applications · Games · Systems
+          </span>
         </div>
 
-        <div className="hero-index">
-          <span>01 / 05</span>
-          <span>SCROLL TO EXPLORE ↓</span>
+        <div className="info-card info-card-small">
+          <span className="info-label">
+            CURRENTLY EXPLORING
+          </span>
+
+          <strong>
+            Creative Technology
+          </strong>
         </div>
 
+      </div>
+
+      {/* Bottom Navigation */}
+      <div className="hero-index">
+        <span>01 / 05</span>
+
+        <span className="scroll-indicator">
+          SCROLL TO EXPLORE
+          <span>↓</span>
+        </span>
       </div>
 
     </section>
