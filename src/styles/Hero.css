@@ -229,6 +229,134 @@
   font-size: 16px;
 }
 
+/* RIGHT PROFILE */
+
+.hero-profile {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.hero-profile h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.7px;
+  margin: 0;
+}
+
+.hero-profile h2 span {
+  color: #e34b73;
+}
+
+.hero-profile p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 14px 0 24px;
+  max-width: 250px;
+}
+
+.profile-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-socials a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+
+.profile-socials a svg {
+  width: 16px;
+  height: 16px;
+}
+
+.profile-socials a:hover {
+  color: #fff;
+  border-color: #e34b73;
+  background: rgba(227, 75, 115, 0.12);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .hero-profile {
+    right: 5%;
+    width: 240px;
+  }
+
+  .hero-profile h2 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-profile {
+    top: auto;
+    bottom: 115px;
+    right: 6%;
+    transform: none;
+    width: 200px;
+  }
+
+  .profile-label {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .hero-profile h2 {
+    font-size: 16px;
+  }
+
+  .hero-profile p {
+    font-size: 11px;
+    margin: 8px 0 14px;
+  }
+
+  .profile-socials {
+    gap: 8px;
+  }
+
+  .profile-socials a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .profile-socials a svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 /* =========================
    TABLET
 ========================= */
