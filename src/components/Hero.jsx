@@ -70,7 +70,7 @@ export default function Hero() {
           rel="noreferrer"
           aria-label="FaGitHub"
         >
-          <Github />
+          <FaGithub />
         </a>
 
         <a
@@ -79,7 +79,7 @@ export default function Hero() {
           rel="noreferrer"
           aria-label="FaInstagram"
         >
-          <Instagram />
+          <FaInstagram />
         </a>
 
         <a
@@ -88,7 +88,7 @@ export default function Hero() {
           rel="noreferrer"
           aria-label="FaLinkedIn"
         >
-          <Linkedin />
+          <FaLinkedin />
         </a>
       </div>
     </div>
