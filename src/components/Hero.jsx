@@ -39,14 +39,7 @@ export default function Hero() {
             software, interactive systems and
             creative technology.
           </p>
-
-          <a href="#works" className="hero-button">
-            <span>EXPLORE MY WORKS</span>
-            <span className="button-arrow">↗</span>
-          </a>
-
         </div>
-
       </div>
 
       {/* Right Profile */}
