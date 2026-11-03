@@ -188,7 +188,8 @@
   width: 290px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .profile-label {
@@ -197,6 +198,21 @@
   font-weight: 600;
   letter-spacing: 2.5px;
   margin-bottom: 14px;
+}
+
+.profile-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 0;
+
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.7px;
 }
 
 .hero-profile h2 {
@@ -212,12 +228,18 @@
   color: #e34b73;
 }
 
+.profile-title span {
+  display: block;
+  white-space: nowrap;
+}
+
 .hero-profile p {
   color: rgba(255, 255, 255, 0.55);
   font-size: 13px;
   line-height: 1.8;
   margin: 12px 0 20px;
   max-width: 250px;
+  text-align: center;
 }
 
 .profile-socials {
