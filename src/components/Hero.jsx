@@ -52,11 +52,10 @@ export default function Hero() {
       {/* Right Profile */}
       <div className="hero-profile">
         <span className="profile-label"> MY APPROACH </span>
-      <h2>
-        Product Builder
-      <br />
-        <span>&</span> Product Architect
-      </h2>
+        <h2 className="profile-title">
+          <span>Product Builder</span>
+          <span>&amp; Product Architect</span>
+        </h2>
 
       <p>
         Building ideas into meaningful
