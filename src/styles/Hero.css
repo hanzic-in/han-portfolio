@@ -74,7 +74,7 @@
   max-width: 680px;
   display: flex;
   flex-direction: column;
-  transform: translate(-65px, -5px);
+  transform: translate(-65px, -5px) scale(0.92);
   align-items: center;
   text-align: center;
 }
