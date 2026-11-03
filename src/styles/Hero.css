@@ -81,7 +81,7 @@
 
 .eyebrow {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   color: #e87996;
   font-size: 11px;
@@ -203,7 +203,7 @@
 }
 
 .hero-profile p {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 15px;
   line-height: 1.8;
   margin: 12px 0 20px;
