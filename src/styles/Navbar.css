@@ -1,3 +1,7 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -14,11 +18,15 @@
 
   z-index: 100;
 
-  /* Background sengaja belum diatur */
+  /* Background akan ditambahkan nanti */
 }
 
+/* =========================
+   LOGO
+========================= */
+
 .navbar-logo {
-  color: white;
+  color: #fff;
   text-decoration: none;
 
   font-size: 27px;
@@ -30,6 +38,10 @@
   color: #e34b73;
 }
 
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -40,7 +52,6 @@
   position: relative;
 
   color: rgba(255, 255, 255, 0.7);
-
   text-decoration: none;
 
   font-size: 11px;
@@ -51,8 +62,47 @@
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #fff;
 }
+
+/* Underline hover */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: #e34b73;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
   .navbar {
@@ -71,5 +121,19 @@
   .nav-links a {
     font-size: 9px;
     letter-spacing: 1px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 8px;
   }
 }
