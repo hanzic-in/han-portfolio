@@ -42,46 +42,41 @@ export default function Hero() {
 
       {/* Right Profile */}
       <div className="hero-profile">
-        <span className="profile-label"> MY APPROACH </span>
+        <div className="profile-glass" aria-hidden="true" />
+
+        <span className="profile-label text-eyebrow">
+          MY APPROACH
+        </span>
+
         <h2 className="profile-title">
           <span>Product Builder</span>
           <span>&amp; Product Architect</span>
         </h2>
 
-      <p>
-        Building ideas into meaningful
-        digital products.
-      </p>
+        <p>
+          Building ideas into meaningful
+          digital products.
+        </p>
 
-      <div className="profile-socials">
-        <a
-          href="https://github.com/hanzic-in"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="FaGitHub"
-        >
-          <FaGithub />
-        </a>
+        <div className="profile-socials">
+          <a
+            href="https://github.com/hanzic-in"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="FaInstagram"
-        >
-          <FaInstagram />
-        </a>
+          <a href="#" aria-label="Instagram">
+            <FaInstagram />
+          </a>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="FaLinkedIn"
-        >
-          <FaLinkedin />
-        </a>
+          <a href="#" aria-label="LinkedIn">
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
-    </div>
 
       {/* Bottom Navigation */}
       <div className="hero-index">
