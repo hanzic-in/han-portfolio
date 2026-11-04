@@ -154,38 +154,53 @@
 .hero-profile {
   position: absolute;
   top: 50%;
-  right: 4%;
+  right: 7%;
   transform: translateY(-50%);
   z-index: 5;
 
-  width: 290px;
+  width: 340px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  background: rgba(35, 15, 25, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 15px 45px rgba(0, 0, 0, 0.12);
 }
 
 .profile-label {
   color: rgba(255, 255, 255, 0.75);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.5px;
-  margin-bottom: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 26px;
 }
 
 .profile-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-
   width: 100%;
   margin: 0;
 
-  color: #fff;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 600;
   line-height: 1.4;
-  letter-spacing: -0.7px;
+  letter-spacing: -1px;
+  background: linear-gradient(
+    110deg,
+    #f5a0b5,
+    #e34b73,
+    #ff354d
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-profile h2 {
