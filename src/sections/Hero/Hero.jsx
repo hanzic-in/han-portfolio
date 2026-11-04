@@ -1,6 +1,6 @@
-import FrameAnimation from "./FrameAnimation";
-import Navbar from "./Navbar";
-import "../styles/Hero.css";
+import FrameAnimation from "../../components/FrameAnimation";
+import Navbar from "../../conponents/Navbar";
+import "./Hero.css";
 import {
   FaGithub,
   FaInstagram,
