@@ -1,5 +1,5 @@
 import FrameAnimation from "../../components/FrameAnimation";
-import Navbar from "../../conponents/Navbar";
+import Navbar from "../../components/Navbar";
 import "./Hero.css";
 import {
   FaGithub,
