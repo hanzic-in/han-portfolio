@@ -1,5 +1,4 @@
 import FrameAnimation from "../../components/FrameAnimation";
-import Navbar from "../../components/Navbar";
 import "./Hero.css";
 import {
   FaGithub,
@@ -17,8 +16,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-overlay" />
-
-      <Navbar />
+      
       {/* Main Content */}
       <div className="hero-content">
 
