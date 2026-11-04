@@ -1,0 +1,64 @@
+:root {
+  /* =====================
+     COLORS
+  ===================== */
+
+  --color-bg: #090708;
+  --color-primary: #ffffff;
+  --color-secondary: rgba(255, 255, 255, 0.75);
+  --color-muted: rgba(255, 255, 255, 0.55);
+
+  --color-accent: #e34b73;
+  --color-accent-soft: #e87996;
+
+  /* =====================
+     TYPOGRAPHY
+  ===================== */
+
+  --text-xs: 10px;
+  --text-sm: 12px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 48px;
+  --text-display: clamp(54px, 6.4vw, 96px);
+
+  /* =====================
+     FONT WEIGHT
+  ===================== */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* =====================
+     SPACING
+  ===================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* =====================
+     RADIUS
+  ===================== */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* =====================
+     GLASS EFFECT
+  ===================== */
+
+  --glass-bg: rgba(35, 15, 25, 0.38);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-blur: 20px;
+}
