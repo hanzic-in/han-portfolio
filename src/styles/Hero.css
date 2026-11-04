@@ -381,7 +381,7 @@
     align-items: center;
 
     transform: translateY(-200px);
-    text-align: flex-start;
+    text-align: center;
   }
 
   .eyebrow {
@@ -400,7 +400,7 @@
     line-height: 1.05;
     letter-spacing: -1.8px;
     margin: 0 0 15px;
-    text-align: center;
+    text-align: flex-start;
     text-wrap: normal;
   }
 
