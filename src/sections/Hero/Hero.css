@@ -1,10 +1,16 @@
+/* =========================
+   HERO BASE
+========================= */
+
 .hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
+
   background: #090708;
   color: #fff;
+
   overflow: hidden;
   isolation: isolate;
 }
@@ -17,6 +23,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
+
   overflow: hidden;
   pointer-events: none;
 }
@@ -24,6 +31,7 @@
 .portrait-canvas {
   position: absolute;
   inset: 0;
+
   display: block;
   width: 100%;
   height: 100%;
@@ -33,6 +41,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+
   pointer-events: none;
 
   background:
@@ -56,6 +65,8 @@
 
 .hero-content {
   position: relative;
+  z-index: 2;
+
   min-height: 100vh;
   min-height: 100svh;
 
@@ -63,7 +74,6 @@
   align-items: center;
 
   padding: 100px 9% 90px;
-  z-index: 2;
 }
 
 .hero-text {
@@ -72,21 +82,26 @@
 
   width: 53%;
   max-width: 680px;
+
   display: flex;
   flex-direction: column;
-  transform: translate(-65px, -5px) scale(0.92);
   align-items: center;
+
+  transform: translate(-65px, -5px) scale(0.92);
+
   text-align: center;
 }
 
-.eyebrow {
+.hero .eyebrow {
   display: block;
   margin-bottom: 24px;
 
   color: #e87996;
+
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 4px;
+
   text-align: center;
 }
 
@@ -98,6 +113,7 @@
   font-weight: 700;
   line-height: 0.98;
   letter-spacing: -5px;
+
   text-wrap: nowrap;
   text-align: center;
 }
@@ -109,11 +125,13 @@
 .hero-text p {
   width: 100%;
   max-width: 420px;
-  margin: 0px;
+  margin: 0;
 
   color: rgba(255, 255, 255, 0.68);
+
   font-size: 15px;
   line-height: 1.9;
+
   text-align: center;
 }
 
@@ -123,6 +141,8 @@
 
 .hero-index {
   position: absolute;
+  z-index: 4;
+
   bottom: 32px;
   left: 9%;
   right: 9%;
@@ -132,10 +152,9 @@
   justify-content: space-between;
 
   color: rgba(255, 255, 255, 0.55);
+
   font-size: 10px;
   letter-spacing: 2px;
-
-  z-index: 4;
 }
 
 .scroll-indicator {
@@ -149,17 +168,22 @@
   font-size: 16px;
 }
 
-/* RIGHT PROFILE - COMPACT GLASS CARD */
+/* =========================
+   PROFILE GLASS CARD
+========================= */
 
 .hero-profile {
   position: absolute;
+  z-index: 5;
+
   top: 50%;
   right: 4%;
+
   transform: translateY(-50%);
-  z-index: 5;
 
   box-sizing: border-box;
   isolation: isolate;
+
   width: 290px;
   padding: 24px;
 
@@ -168,18 +192,22 @@
   align-items: center;
 
   background: transparent;
+
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
 }
 
 .hero-profile::before {
   content: "";
+
   position: absolute;
   inset: 0;
   z-index: -1;
+
   border-radius: inherit;
 
   background: rgba(35, 15, 25, 0.38);
+
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
@@ -189,11 +217,13 @@
 }
 
 .profile-label {
+  margin-bottom: 18px;
+
   color: rgba(255, 255, 255, 0.75);
+
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 2.5px;
-  margin-bottom: 18px;
 }
 
 .profile-title {
@@ -204,34 +234,12 @@
   width: 100%;
   margin: 0;
 
+  color: #fff;
+
   font-size: 23px;
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.8px;
-
-  color: #fff;
-}
-
-@supports (
-  (-webkit-mask-image: url("data:image/svg+xml,<svg/>")) or
-  (mask-image: url("data:image/svg+xml,<svg/>"))
-) {
-  .hero-profile::before {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 260'%3E%3Crect width='290' height='260' fill='white'/%3E%3Cg fill='none' font-family='Arial,sans-serif' font-size='23' font-weight='700' text-anchor='middle' letter-spacing='-0.8'%3E%3Ctext x='145' y='100'%3EProduct Builder%3C/text%3E%3Ctext x='145' y='131'%3E%26amp%3B Product Architect%3C/text%3E%3C/g%3E%3C/svg%3E");
-
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 260'%3E%3Crect width='290' height='260' fill='white'/%3E%3Cg fill='none' font-family='Arial,sans-serif' font-size='23' font-weight='700' text-anchor='middle' letter-spacing='-0.8'%3E%3Ctext x='145' y='100'%3EProduct Builder%3C/text%3E%3Ctext x='145' y='131'%3E%26amp%3B Product Architect%3C/text%3E%3C/g%3E%3C/svg%3E");
-
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-
-  .profile-title {
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
 }
 
 .profile-title span {
@@ -244,10 +252,16 @@
   margin: 14px 0 18px;
 
   color: rgba(255, 255, 255, 0.78);
+
   font-size: 13px;
   line-height: 1.7;
+
   text-align: center;
 }
+
+/* =========================
+   PROFILE SOCIALS
+========================= */
 
 .profile-socials {
   display: flex;
@@ -264,6 +278,7 @@
   justify-content: center;
 
   color: rgba(255, 255, 255, 0.75);
+
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
 
@@ -275,62 +290,12 @@
   height: 15px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 1024px) {
-  .hero-profile {
-    right: 5%;
-    width: 240px;
-  }
-
-  .hero-profile h2 {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-profile {
-    top: auto;
-    bottom: 115px;
-    right: 6%;
-    transform: none;
-    width: 200px;
-  }
-
-  .profile-label {
-    font-size: 8px;
-    margin-bottom: 10px;
-  }
-
-  .hero-profile h2 {
-    font-size: 16px;
-  }
-
-  .hero-profile p {
-    font-size: 11px;
-    margin: 8px 0 14px;
-  }
-
-  .profile-socials {
-    gap: 8px;
-  }
-
-  .profile-socials a {
-    width: 32px;
-    height: 32px;
-  }
-
-  .profile-socials a svg {
-    width: 14px;
-    height: 14px;
-  }
-}
-
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 1024px) {
+
   .hero-text {
     width: 65%;
   }
@@ -345,13 +310,14 @@
     width: 220px;
   }
 
-  .hero-profile h2 {
+  .profile-title {
     font-size: 18px;
   }
+
 }
 
 /* =========================
-   MOBILE LAYOUT
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
@@ -362,15 +328,6 @@
   }
 
   /* BACKGROUND */
-
-  .hero-visual {
-    z-index: -2;
-  }
-
-  .portrait-canvas {
-    width: 100%;
-    height: 100%;
-  }
 
   .hero-overlay {
     background:
@@ -388,22 +345,23 @@
       );
   }
 
-  /* LEFT CONTENT */
+  /* HERO TEXT */
 
   .hero-content {
     position: relative;
+
     min-height: 100svh;
 
     display: flex;
     align-items: center;
 
     padding: 0 46% 0 6%;
-    z-index: 2;
   }
 
   .hero-text {
     position: relative;
     z-index: 3;
+
     width: 100%;
     max-width: 100%;
 
@@ -412,48 +370,50 @@
     align-items: center;
 
     transform: translateY(-200px);
+
     text-align: center;
   }
 
-  .eyebrow {
-    display: block;
+  .hero .eyebrow {
+    margin-bottom: 15px;
+
     font-size: 9px;
     font-weight: 600;
     letter-spacing: 2.2px;
-    margin-bottom: 15px;
-    text-align: center;
   }
 
   .hero-text h1 {
     width: 100%;
+    margin: 0 0 15px;
+
     font-size: clamp(28px, 7.5vw, 36px);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -1.8px;
-    margin: 0 0 15px;
-    text-align: flex-start;
+
     text-wrap: normal;
+    text-align: left;
   }
 
   .hero-text p {
     width: 100%;
     max-width: 100%;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
 
     font-size: 13px;
     line-height: 1.65;
 
-    margin: 0;
-    color: rgba(255, 255, 255, 0.78);
     text-align: center;
   }
 
-  /* RIGHT PROFILE */
+  /* PROFILE CARD */
 
   .hero-profile {
-    position: absolute;
-
     top: auto;
     bottom: 78px;
+
     left: 8%;
     right: 8%;
 
@@ -469,9 +429,10 @@
   }
 
   .profile-label {
+    margin-bottom: 9px;
+
     font-size: 9px;
     letter-spacing: 2.5px;
-    margin-bottom: 9px;
   }
 
   .profile-title {
@@ -490,13 +451,15 @@
 
   .hero-profile p {
     max-width: 300px;
+    margin: 8px 0 13px;
 
     font-size: 12px;
     line-height: 1.6;
 
-    margin: 8px 0 13px;
     text-align: left;
   }
+
+  /* SOCIALS */
 
   .profile-socials {
     gap: 9px;
@@ -515,13 +478,15 @@
   /* FOOTER */
 
   .hero-index {
+    bottom: 20px;
+
     left: 8%;
     right: 8%;
-    bottom: 20px;
 
     font-size: 8px;
     letter-spacing: 1.5px;
   }
+
 }
 
 /* =========================
