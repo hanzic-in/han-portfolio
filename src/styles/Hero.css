@@ -381,7 +381,7 @@
     align-items: center;
 
     transform: translateY(-200px);
-    text-align: center;
+    text-align: flex-start;
   }
 
   .eyebrow {
