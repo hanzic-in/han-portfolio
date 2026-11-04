@@ -42,15 +42,21 @@ export default function Hero() {
 
       {/* Right Profile */}
       <div className="hero-profile">
-        <div className="profile-glass" aria-hidden="true">
-          <h2 className="profile-title">
-            <span>Product Builder</span>
-            <span>&amp; Product Architect</span>
-          </h2>
-        </div>
+        <div className="profile-glass" aria-hidden="true" />
 
-        <span className="profile-label text-eyebrow">MY APPROACH</span>
-        <p>Building ideas into meaningful digital products.</p>
+        <span className="profile-label text-eyebrow">
+          MY APPROACH
+        </span>
+
+        <h2 className="profile-title">
+          <span>Product Builder</span>
+          <span>&amp; Product Architect</span>
+        </h2>
+
+        <p>
+          Building ideas into meaningful
+          digital products.
+        </p>
 
         <div className="profile-socials">
           <a
