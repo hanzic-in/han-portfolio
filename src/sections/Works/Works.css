@@ -1,0 +1,6 @@
+.works {
+  min-height: 100vh;
+  padding: 100px 9%;
+  background: var(--color-bg);
+  color: var(--color-primary);
+}
