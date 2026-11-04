@@ -202,7 +202,6 @@ border-radius: var(--radius-md);
   position: absolute;
   inset: 0;
   z-index: -1;
-
   border-radius: inherit;
 
   background: var(--glass-bg);
@@ -213,16 +212,6 @@ border-radius: var(--radius-md);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 15px 45px rgba(0, 0, 0, 0.12);
-
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 260'%3E%3Crect width='290' height='260' fill='white'/%3E%3Cg fill='black' font-family='Arial,sans-serif' font-size='23' font-weight='600' text-anchor='middle' letter-spacing='-0.8'%3E%3Ctext x='145' y='100'%3EProduct Builder%3C/text%3E%3Ctext x='145' y='131'%3E%26amp%3B Product Architect%3C/text%3E%3C/g%3E%3C/svg%3E");
-
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 260'%3E%3Crect width='290' height='260' fill='white'/%3E%3Cg fill='black' font-family='Arial,sans-serif' font-size='23' font-weight='600' text-anchor='middle' letter-spacing='-0.8'%3E%3Ctext x='145' y='100'%3EProduct Builder%3C/text%3E%3Ctext x='145' y='131'%3E%26amp%3B Product Architect%3C/text%3E%3C/g%3E%3C/svg%3E");
-
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
 }
 
 .profile-label {
